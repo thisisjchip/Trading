@@ -1,0 +1,11 @@
+# Runtime dependencies. Pinned loosely; see pyproject.toml for the source of truth.
+python-kraken-sdk>=3.2,<4
+pandas>=2.0
+numpy>=1.24
+pyarrow>=14
+pyyaml>=6.0
+python-dotenv>=1.0
+requests>=2.31
+
+# Dev / test
+pytest>=7.4

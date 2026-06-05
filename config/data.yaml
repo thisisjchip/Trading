@@ -1,0 +1,12 @@
+# Data universe to cache. `scripts/fetch_ohlcv.py --config config/data.yaml`
+# refreshes every series listed here (incremental by default).
+exchange: kraken_futures        # default target; CLI --exchange overrides
+series:
+  - symbol: XBT/USD
+    timeframe: 1h
+  - symbol: XBT/USD
+    timeframe: 1d
+  - symbol: ETH/USD
+    timeframe: 1h
+  - symbol: ETH/USD
+    timeframe: 1d

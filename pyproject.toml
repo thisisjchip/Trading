@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kraken-trend"
+version = "0.1.0"
+description = "Trend-following algorithmic trading system for Kraken (spot + futures + future US perps) behind a clean exchange adapter."
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+    "python-kraken-sdk>=3.2,<4",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pyarrow>=14",        # parquet engine for the OHLCV cache
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "requests>=2.31",     # direct-REST fallback where the SDK lacks coverage
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
