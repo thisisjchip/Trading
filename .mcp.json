@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "trader-dev": {
+      "type": "http",
+      "url": "https://mcp.trader.dev/v1"
+    }
+  }
+}
